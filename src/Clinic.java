@@ -21,7 +21,11 @@ class Clinic {
     public void admitPatient(Patient patient) {
         // Add the patient to the queue and print "Patient <name> admitted."
 
-        // TODO
+        if(!admittedPatientSet.contains(patient)){
+            admittedPatients.add(patient);
+            admittedPatientSet.add(patient);
+            System.out.println("Patient" + patient.getName() +" is already admitted.");
+        }
     }
     
 
@@ -30,8 +34,16 @@ class Clinic {
         // Assign appointment day to patients(eg. Day 1, Day 2, and so on) as per their order in queue. 
         // Give appointment to maximum 3 patients per day.
         // Once appointment is given to a patient, add that patient to `admittedPatients` set. Also, print "Scheduled <name> on <appointmentDay>"
-
-        // TODO
+        int max_appointments = 3;
+        System.out.println("Schedule for Day" + dayCount +":");
+        int count = 0;
+        while(count < max_appointments && admittedPatients.isEmpty()){
+            Patient patient = admittedPatients.add(patient);
+            System.out.println(patient.getName());
+            admittedPatients.add(patient);
+            count++;
+        }
+        dayCount++;
     }
 
 
@@ -40,7 +52,11 @@ class Clinic {
         // Provide treatment to a patient only if the patient is admitted. Print "Treatment provided to <name>: <treatment>"
         // Else print "Patient not found in the admitted list."
         
-        // TODO
+        if(admittedPatientSet.contains(patient){
+            System.out.println("Treatment provided to" + patient.getName() +":" + treatment);
+        }else{
+            System.out.println("Patient" + patient.getName() +" not found in admitted list");
+        }
     }
 
 
@@ -49,7 +65,11 @@ class Clinic {
         // Print patient details only if the patient is admitted.
         // Else print "Patient not found in the admitted list."
         
-        // TODO
+        if(admittedPatientSet.contains(patient){
+            System.out.println("Patient Details"+ patient); //doubt
+        }else{
+            System.out.println("Patient not found in the admitted list");
+        }
     }
 
 
