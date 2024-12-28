@@ -18,9 +18,33 @@ class Patient {
 
     // Getter methods for name, age, gender, symptoms, treatment, appointmentDay
     // TODO
-
+    public String getName(){
+        return name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public String getGender(){
+        return gender;
+    }
+    public String getSymptoms(){
+        return symptoms;
+    }
+    public String getTreatment(){
+        return treatment;
+    }
+    public String getAppoinmentDay(){
+        return appointmentDay;
+    }
+    
     // Setter methods for treatment, appointmentDay
-    // TODO
+    
+    public void setTreatment(String treatment){
+        this.treatment = treatment;
+    }
+    public void setAppoinmentDay(String appointmentDay){
+        this.appointmentDay = appointmentDay;
+    }
 
     
     /* The below equals() and hashCode() methods are crucial for the proper functioning of 

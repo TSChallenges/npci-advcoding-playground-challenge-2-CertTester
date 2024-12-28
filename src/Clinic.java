@@ -66,7 +66,7 @@ class Clinic {
         // Else print "Patient not found in the admitted list."
         
         if(admittedPatientSet.contains(patient){
-            System.out.println("Patient Details"+ patient); //doubt
+            System.out.println("Patient Details"+ patient.getName()); //doubt
         }else{
             System.out.println("Patient not found in the admitted list");
         }
@@ -78,7 +78,13 @@ class Clinic {
         // Print appointment details of a patient only if the patient is admitted. "Appointment Details: <name> is scheduled on <appointmentDay>"
         // Else print "Patient not found in the admitted list."
         
-        // TODO
+        if(admittedPatientSet.contains(patient)){
+
+            System.out.println("Patient details "+patient.getName()); //doubt
+
+        }else{
+            System.out.println("Patient "+patient.getName()+ "not found in the appointment list");
+        }
     }
 
 
@@ -86,6 +92,14 @@ class Clinic {
     public void dischargePatient(Patient patient) {
         // Remove the patient from admitted patients list. Print "Patient <name> discharged."
 
-        // TODO
+        if(admittedPatientSet.contains(patient)){
+            admittedPatients.remove(patient);
+            admittedPatientSet.remove(patient);
+            System.out.println(" Patient "+patient.getName()+" discharged");
+
+        }else{
+            System.out.println("Patient "+patient.getName()+ "not found in admitted patients list.");
+
+        }
     }
 }
