@@ -23,7 +23,7 @@ class Clinic {
 
         if(!admittedPatientSet.contains(patient)){
             admittedPatients.add(patient);
-            admittedPatientSet.add(patient);
+            // admittedPatientSet.add(patient);
             System.out.println("Patient" + patient.getName() +" is already admitted.");
         }
     }
@@ -66,7 +66,7 @@ class Clinic {
         // Else print "Patient not found in the admitted list."
         
         if(admittedPatientSet.contains(patient){
-            System.out.println("Patient Details"+ patient.getName()); //doubt
+            System.out.println("Patient Details"+ patient); //doubt
         }else{
             System.out.println("Patient not found in the admitted list");
         }
@@ -80,7 +80,7 @@ class Clinic {
         
         if(admittedPatientSet.contains(patient)){
 
-            System.out.println("Patient details "+patient.getName()); //doubt
+            System.out.println("Patient details "+patient); //doubt
 
         }else{
             System.out.println("Patient "+patient.getName()+ "not found in the appointment list");
@@ -94,7 +94,7 @@ class Clinic {
 
         if(admittedPatientSet.contains(patient)){
             admittedPatients.remove(patient);
-            admittedPatientSet.remove(patient);
+            // admittedPatientSet.remove(patient);
             System.out.println(" Patient "+patient.getName()+" discharged");
 
         }else{
